@@ -1,0 +1,141 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dq5a1"]
+
+[resource]
+script = ExtResource("1_dq5a1")
+titles = {
+"pay": "17",
+"start": "3"
+}
+character_names = PackedStringArray("Gran Pirata", "Pirata Malaplata")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"is_snippet": false,
+"next_id": "17",
+"parent_id": "9",
+"type": "goto"
+},
+"11": {
+"next_id": "12",
+"next_id_after": "17",
+"text": "Quiero cinco",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Quiero cinco",
+"type": "response"
+},
+"12": {
+"is_snippet": false,
+"next_id": "17",
+"parent_id": "11",
+"type": "goto"
+},
+"13": {
+"next_id": "14",
+"next_id_after": "17",
+"text": "Las que me alcancen con estas monedas",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Las que me alcancen con estas monedas",
+"type": "response"
+},
+"14": {
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "13",
+"type": "goto"
+},
+"16": {
+"next_id": "17",
+"text": "pay",
+"type": "title"
+},
+"17": {
+"character": "Gran Pirata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "18",
+"text": "Sí te alcanza, ¿verdad?.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sí te alcanza, ¿verdad?.",
+"type": "dialogue"
+},
+"18": {
+"character": "Pirata Malaplata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "19",
+"text": "¡Claro que sí!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¡Claro que sí!",
+"type": "dialogue"
+},
+"19": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Gran Pirata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Hola pequeño pirata. ¿En qué te puedo ayudar?.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hola pequeño pirata. ¿En qué te puedo ayudar?.",
+"type": "dialogue"
+},
+"4": {
+"character": "Pirata Malaplata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Estaba interesado en comprar un cañon destructor.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Estaba interesado en comprar un cañon destructor.",
+"type": "dialogue"
+},
+"5": {
+"character": "Gran Pirata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Lo siento, por ahora solo te ofrezco bombas. 5 monedas de oro por cada una.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lo siento, por ahora solo te ofrezco bombas. 5 monedas de oro por cada una.",
+"type": "dialogue"
+},
+"6": {
+"character": "Pirata Malaplata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "Bueno...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bueno...",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "17",
+"responses": PackedStringArray("7", "9", "11", "13"),
+"text": "Quiero una",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Quiero una",
+"type": "response"
+},
+"8": {
+"is_snippet": false,
+"next_id": "17",
+"parent_id": "7",
+"type": "goto"
+},
+"9": {
+"next_id": "10",
+"next_id_after": "17",
+"text": "Quiero tres",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Quiero tres",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.20.0"

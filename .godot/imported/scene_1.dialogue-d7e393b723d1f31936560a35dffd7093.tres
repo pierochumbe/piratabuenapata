@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_8b8o4"]
+
+[resource]
+script = ExtResource("1_8b8o4")
+titles = {
+"dialogue_1": "3",
+"dialogue_2": "12"
+}
+character_names = PackedStringArray("Selena la Ballena", "Pirata Malaplata")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "dialogue_1",
+"type": "title"
+},
+"11": {
+"next_id": "12",
+"text": "dialogue_2",
+"type": "title"
+},
+"12": {
+"character": "Selena la Ballena",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "13",
+"text": "¡Bueno nos vemos!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¡Bueno nos vemos!",
+"type": "dialogue"
+},
+"13": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Selena la Ballena",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "¡Hola aventurero! ¿qué te trae por estos rumbos?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¡Hola aventurero! ¿qué te trae por estos rumbos?",
+"type": "dialogue"
+},
+"4": {
+"character": "Pirata Malaplata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "5",
+"text": "Necesito abrir la puerta. ¿Puedes ayudarme?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Necesito abrir la puerta. ¿Puedes ayudarme?",
+"type": "dialogue"
+},
+"5": {
+"character": "Selena la Ballena",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "7",
+"text": "Sí, claro. Sólo tienes que presionar la tecla [A] y la puerta se abrirá..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sí, claro. Sólo tienes que presionar la tecla [A] y la puerta se abrirá..",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "8",
+"responses": PackedStringArray("7"),
+"text": "Gracias, ¡lo intentaré!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Gracias, ¡lo intentaré!",
+"type": "response"
+},
+"8": {
+"is_snippet": false,
+"next_id": "12",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.20.0"

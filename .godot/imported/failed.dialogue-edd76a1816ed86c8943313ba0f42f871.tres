@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_hesgc"]
+
+[resource]
+script = ExtResource("1_hesgc")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Gran Pirata", "Pirata Malaplata")
+first_title = "3"
+lines = {
+"1": {
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"3": {
+"character": "Gran Pirata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "4",
+"text": "Lo siento, no tienes suficientes monedas.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lo siento, no tienes suficientes monedas.",
+"type": "dialogue"
+},
+"4": {
+"character": "Pirata Malaplata",
+"character_replacements": Array[Dictionary]([]),
+"next_id": "6",
+"text": "Bueno. Tendré que conseguir más monedas.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bueno. Tendré que conseguir más monedas.",
+"type": "dialogue"
+},
+"6": {
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.20.0"

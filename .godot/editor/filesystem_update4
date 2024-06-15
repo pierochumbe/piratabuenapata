@@ -1,0 +1,11 @@
+res://assets/resources/bg_tile_set.tres
+res://scenes/game/levels/rooms/scene_1/scene_1.tscn
+res://scenes/game/enemy/crabby.tscn
+res://scenes/game/levels/rooms/scene_3/scene_3.tscn
+res://scenes/game/levels/rooms/init/init.tscn
+res://scenes/game/levels/rooms/scene_2/scene_2.tscn
+res://scenes/game/transitions/scene_transition.tscn
+res://scenes/game/levels/rooms/scene_4/scene_4.tscn
+res://scenes/game/levels/objects/change_scene/door_change_scene.tscn
+res://assets/resources/bg_tile_set_transparente.tres
+res://scenes/game/levels/rooms/scene_3/scene_3.gd
