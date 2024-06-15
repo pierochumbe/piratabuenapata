@@ -1,0 +1,201 @@
+[gd_scene load_steps=17 format=3 uid="uid://b6rqoiasbljol"]
+
+[ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="1_8hkoc"]
+[ext_resource type="TileSet" uid="uid://bx1rsqucrwm2i" path="res://assets/resources/bg_tile_set.tres" id="2_xagg4"]
+[ext_resource type="PackedScene" uid="uid://8rbt5lmdrp0s" path="res://scenes/game/camera/camera.tscn" id="3_m47ai"]
+[ext_resource type="PackedScene" uid="uid://bcil4n46byhj5" path="res://scenes/game/levels/objects/back_palm_tree/back_palm_tree.tscn" id="4_hncdj"]
+[ext_resource type="TileSet" uid="uid://c0cctdt6ksxcf" path="res://assets/resources/bg_tile_set_transparente.tres" id="4_xyc5h"]
+[ext_resource type="PackedScene" uid="uid://c2nps502udtd6" path="res://scenes/game/levels/objects/front_palm_tree/front_palm_tree.tscn" id="5_2l8ey"]
+[ext_resource type="Texture2D" uid="uid://maf7s1c6fyyp" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/objects/chest/chest_close_04.png" id="6_7yfsy"]
+[ext_resource type="Texture2D" uid="uid://dcptpykdlp5rk" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/objects/flag/flag_01.png" id="7_fwx0t"]
+[ext_resource type="Texture2D" uid="uid://cg6wkkuni8aq8" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/bg_image.png" id="9_taw8j"]
+[ext_resource type="Texture2D" uid="uid://b2a11ffyw34fs" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/background/water_reflect_medium_01.png" id="10_py67r"]
+[ext_resource type="PackedScene" uid="uid://deedu63sld0es" path="res://scenes/game/levels/objects/death/death.tscn" id="11_w3hnl"]
+[ext_resource type="PackedScene" uid="uid://bnp6y3fe4kqob" path="res://scenes/game/levels/objects/damage_object/cannon/cannon.tscn" id="12_e7jb4"]
+[ext_resource type="PackedScene" uid="uid://c2e1lhm1w4re4" path="res://scenes/game/levels/objects/damage_object/spikes/spikes.tscn" id="13_lro4s"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qw63y"]
+load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5m71f"]
+load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb15f67.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2busq"]
+load_path = "res://.godot/imported/small_cloud_3.png-2824e524f4818e08cf60700642ab74ab.ctex"
+
+[node name="Scene4" type="Node2D"]
+
+[node name="MainCharacter" parent="." instance=ExtResource("1_8hkoc")]
+z_index = 2
+position = Vector2(60, 481)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_xagg4")
+rendering_quadrant_size = 32
+format = 2
+layer_0/name = "Terrain"
+layer_0/tile_data = PackedInt32Array(1179648, 65539, 0, 1245184, 65539, 1, 1179649, 65539, 0, 1245185, 65539, 1, 1179650, 65539, 0, 1245186, 65539, 1, 1179651, 65539, 0, 1245187, 65539, 1, 1179652, 65539, 0, 1245188, 65539, 1, 1179653, 65539, 0, 1245189, 65539, 1, 1179654, 65539, 0, 1245190, 65539, 1, 1179673, 65539, 0, 1245209, 65539, 1, 1179674, 65539, 0, 1245210, 65539, 1, 1179675, 65539, 0, 1245211, 65539, 1, 1179676, 65539, 0, 1245212, 65539, 1, 1179677, 65539, 0, 1245213, 65539, 1, 1179678, 65539, 0, 1245214, 65539, 1, 1179679, 65539, 0, 1245215, 65539, 1, 1179680, 65539, 0, 1245216, 65539, 1, 1179681, 65539, 0, 1245217, 65539, 1, 1179682, 65539, 0, 1245218, 65539, 1, 1179683, 65539, 1, 1245219, 65539, 1, 589852, 3, 4, 589853, 65539, 4, 589854, 65539, 4, 589855, 65539, 4, 589856, 131075, 4, 983074, 262147, 1, 1048610, 262147, 1, 1114146, 262147, 1, 852002, 262147, 1, 917538, 262147, 1, 720930, 262147, 0, 786466, 262147, 1, 1310720, 65539, 1, 1310721, 65539, 1, 1310722, 65539, 1, 1310723, 65539, 1, 1310724, 65539, 1, 1310725, 65539, 1, 1310726, 65539, 1, 1310719, 65539, 1, 1376255, 65539, 1, 1245183, 65539, 0, 1245182, 393219, 1, 1310718, 65539, 1, 1376254, 65539, 1, 1310736, 65539, 1, 1310737, 65539, 1, 1310739, 65539, 1, 1310740, 65539, 1, 1310741, 65539, 1, 1310742, 65539, 1, 1310743, 65539, 1, 1310744, 65539, 1, 1310745, 65539, 1, 1310746, 65539, 1, 1310747, 65539, 1, 1310748, 65539, 1, 1310749, 65539, 1, 1310750, 65539, 1, 1310751, 65539, 1, 1310752, 65539, 1, 1310753, 65539, 1, 1310754, 65539, 1, 1310755, 65539, 1, 1179658, 65539, 0, 1245194, 65539, 1, 1179657, 65539, 0, 1245193, 65539, 1, 1310729, 65539, 1, 1310730, 65539, 1, 1310731, 65539, 1, 1310732, 65539, 1, 1310734, 65539, 1, 1310733, 65539, 1, 1310735, 65539, 1, 917537, 983043, 3, 917536, 983043, 3, 1048574, 131075, 1, 1179646, 131075, 1, 1179645, 65539, 1, 1114110, 131075, 1, 917529, 983043, 3, 917530, 983043, 3, 1114147, 262147, 1, 1048611, 262147, 1, 983075, 262147, 1, 917539, 262147, 1, 852003, 262147, 1, 458787, 262147, 1, 524323, 262147, 1, 589859, 262147, 1, 655395, 262147, 1, 720931, 262147, 1, 786467, 262147, 1, 917502, 131075, 1, 851966, 131075, 1, 786430, 131075, 1, 720894, 131075, 1, 655358, 131075, 1, 589822, 131075, 1, 524286, 131075, 1, 458750, 131075, 1, 393214, 131075, 1, 327678, 131075, 1, 262142, 131075, 1, 196606, 131075, 1, 131070, 131075, 1, 65534, 131075, 1, 327715, 262147, 1, 393251, 262147, 1, 983071, 262147, 4, 1245191, 65539, 1, 1310727, 65539, 1, 1179655, 65539, 0, -3, 65539, 1, 65533, 65539, 1, 131069, 65539, 1, 196605, 65539, 1, 262141, 65539, 1, 327677, 65539, 1, 393213, 65539, 1, 458749, 65539, 1, 524285, 65539, 1, 589821, 65539, 1, 655357, 65539, 1, 720893, 65539, 1, 786429, 65539, 1, 851965, 65539, 1, 917501, 65539, 1, 983037, 65539, 1, 1048573, 65539, 1, 1114109, 65539, 1, 1245181, 65539, 1, 1310717, 65539, 1, 1376253, 65539, 1, -2, 65539, 1, 1245207, 65539, 1, 1245208, 65539, 1, 1179672, 65539, 0, 1179671, 65539, 0, 1179670, 65539, 0, 1245206, 65539, 1, 1048605, 262147, 4, 458760, 262147, 1, 524296, 262147, 1, 589832, 262147, 1, 655368, 262147, 1, 983038, 131075, 1, 524290, 3, 4, 1179656, 65539, 0, 1310728, 65539, 1, 1245192, 65539, 1, 524291, 131075, 4, 1048578, 262147, 4, 917504, 262147, 4, 655360, 262147, 4, 983048, 262147, 1, 917512, 262147, 1, 786434, 262147, 4, 851976, 262147, 1, 1048584, 262147, 1, 393224, 262147, 0, 1179659, 131075, 0, 1245196, 65539, 0, 1245197, 65539, 0, 1245198, 65539, 0, 1245199, 65539, 0, 1179664, 262147, 0, 1245201, 65539, 0, 1245203, 65539, 0, 1179668, 3, 0, 1179669, 65539, 0, 1114120, 262147, 1, 1048587, 3, 0, 1048588, 65539, 0, 1048589, 65539, 0, 1048590, 65539, 0, 1048591, 65539, 0, 1048592, 65539, 0, 1048593, 65539, 0, 1048594, 65539, 0, 1048595, 65539, 0, 1048596, 65539, 0, 1048597, 131075, 0, 1114125, 3, 2, 1114126, 131075, 2, 983059, 262147, 4, 917524, 262147, 4)
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_m47ai")]
+position = Vector2(324, 395)
+limit_right = 1800
+character = NodePath("../MainCharacter")
+
+[node name="TileMapatravesable" type="TileMap" parent="."]
+z_index = 1
+tile_set = ExtResource("4_xyc5h")
+rendering_quadrant_size = 32
+format = 2
+layer_0/name = "Terrain"
+layer_0/tile_data = PackedInt32Array(1245187, 65539, 1, 1245188, 65539, 1, 1245189, 65539, 1, 1245190, 65539, 1, 1179673, 65539, 0, 1245209, 65539, 1, 1179674, 65539, 0, 1245210, 65539, 1, 1179675, 65539, 0, 1245211, 65539, 1, 1179676, 65539, 0, 1245212, 65539, 1, 1179677, 65539, 0, 1245213, 65539, 1, 1179678, 65539, 0, 1245214, 65539, 1, 1179679, 65539, 0, 1245215, 65539, 1, 1179680, 65539, 0, 1245216, 65539, 1, 1179681, 65539, 0, 1245217, 65539, 1, 1179682, 65539, 0, 1245218, 65539, 1, 1179683, 65539, 1, 1245219, 65539, 1, 589852, 3, 4, 589853, 65539, 4, 589854, 65539, 4, 589855, 65539, 4, 589856, 131075, 4, 983074, 262147, 1, 1048610, 262147, 1, 1114146, 262147, 1, 852002, 262147, 1, 917538, 262147, 1, 720930, 262147, 0, 786466, 262147, 1, 1310736, 65539, 1, 1310737, 65539, 1, 1310739, 65539, 1, 1310740, 65539, 1, 1310741, 65539, 1, 1310742, 65539, 1, 1310743, 65539, 1, 1310744, 65539, 1, 1310745, 65539, 1, 1310746, 65539, 1, 1310747, 65539, 1, 1310748, 65539, 1, 1310749, 65539, 1, 1310750, 65539, 1, 1310751, 65539, 1, 1310752, 65539, 1, 1310753, 65539, 1, 1310754, 65539, 1, 1310755, 65539, 1, 1310732, 65539, 1, 1310734, 65539, 1, 1310733, 65539, 1, 1310735, 65539, 1, 917537, 983043, 3, 917536, 983043, 3, 1179645, 65539, 1, 917529, 983043, 3, 917530, 983043, 3, 1114147, 262147, 1, 1048611, 262147, 1, 983075, 262147, 1, 917539, 262147, 1, 852003, 262147, 1, 458787, 262147, 1, 524323, 262147, 1, 589859, 262147, 1, 655395, 262147, 1, 720931, 262147, 1, 786467, 262147, 1, 458750, 131075, 1, 393214, 131075, 1, 327678, 131075, 1, 262142, 131075, 1, 196606, 131075, 1, 131070, 131075, 1, 65534, 131075, 1, 327715, 262147, 1, 393251, 262147, 1, 983071, 262147, 4, 1245191, 65539, 1, -3, 65539, 1, 65533, 65539, 1, 131069, 65539, 1, 196605, 65539, 1, 262141, 65539, 1, 327677, 65539, 1, 393213, 65539, 1, 458749, 65539, 1, 524285, 65539, 1, 589821, 65539, 1, 655357, 65539, 1, 720893, 65539, 1, 786429, 65539, 1, 851965, 65539, 1, 917501, 65539, 1, 983037, 65539, 1, 1048573, 65539, 1, 1114109, 65539, 1, 1245181, 65539, 1, 1310717, 65539, 1, 1376253, 65539, 1, -2, 65539, 1, 1245207, 65539, 1, 1245208, 65539, 1, 1179672, 65539, 0, 1179671, 65539, 0, 1179670, 65539, 0, 1245206, 65539, 1, 1048605, 262147, 4, 720904, 131075, 1, 786440, 131075, 1, 1114123, 65539, 1, 1114124, 65539, 1, 1179660, 65539, 1, 1179661, 65539, 1, 1179662, 65539, 1, 1179663, 65539, 1, 1114127, 65539, 1, 1114128, 65539, 1, 1114129, 65539, 1, 1179665, 65539, 1, 1114130, 65539, 1, 1179666, 65539, 1, 1179667, 65539, 1, 1114131, 65539, 1, 1245202, 65539, 1, 1310738, 65539, 1, 1114132, 65539, 1, 1114133, 65539, 1, 1179659, 65539, 1, 1245195, 65539, 1, 1245196, 65539, 1, 1245197, 65539, 1, 1245198, 65539, 1, 1245199, 65539, 1, 1245200, 65539, 1, 1179664, 65539, 1, 1245201, 65539, 1, 1245203, 65539, 1, 1245204, 65539, 1, 1179668, 65539, 1, 1179669, 65539, 1, 1245205, 65539, 1, 1114125, 65539, 1, 1114126, 65539, 1)
+layer_1/name = "Tree"
+layer_1/tile_data = PackedInt32Array(1114140, 2, 0, 655394, 2, 0, 786451, 2, 0, 917504, 2, 1, 851968, 2, 0, 327693, 2, 0, 393229, 2, 1, 1179676, 2, 1, 851987, 2, 1, 589828, 2, 0, 655364, 2, 1)
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="BackPalm" type="Node2D" parent="Objects"]
+position = Vector2(207, 12)
+
+[node name="BackPalmTree" parent="Objects/BackPalm" instance=ExtResource("4_hncdj")]
+z_index = -1
+position = Vector2(510, 476)
+animation = &"idle_left"
+
+[node name="BackPalmTree3" parent="Objects/BackPalm" instance=ExtResource("4_hncdj")]
+z_index = -1
+position = Vector2(897, 139)
+
+[node name="FrontPalm" type="Node2D" parent="Objects"]
+
+[node name="FrontPalmTree2" parent="Objects/FrontPalm" instance=ExtResource("5_2l8ey")]
+z_index = 1
+position = Vector2(287, 550)
+scale = Vector2(1.32051, 1.6875)
+flip_v = true
+
+[node name="FrontPalmTree3" parent="Objects/FrontPalm" instance=ExtResource("5_2l8ey")]
+z_index = 1
+position = Vector2(1103, 312)
+
+[node name="FrontPalmTree4" parent="Objects/FrontPalm" instance=ExtResource("5_2l8ey")]
+z_index = 1
+position = Vector2(257, 551)
+scale = Vector2(1.26282, 1.64062)
+flip_h = true
+flip_v = true
+
+[node name="FrontPalmTree6" parent="Objects/FrontPalm" instance=ExtResource("5_2l8ey")]
+position = Vector2(431, 152)
+
+[node name="FrontPalmTree5" parent="Objects/FrontPalm" instance=ExtResource("5_2l8ey")]
+position = Vector2(911, 535)
+
+[node name="Chest" type="Sprite2D" parent="Objects"]
+position = Vector2(664, 399)
+texture = ExtResource("6_7yfsy")
+
+[node name="Flag" type="Sprite2D" parent="Objects"]
+position = Vector2(714, 370)
+texture = ExtResource("7_fwx0t")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Bg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -2
+z_as_relative = false
+position = Vector2(499, 370)
+scale = Vector2(3.07552, 5.17188)
+texture = ExtResource("9_taw8j")
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Cloud" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(171, 83.004)
+scale = Vector2(4, 2.667)
+texture = SubResource("CompressedTexture2D_qw63y")
+
+[node name="Cloud2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(547, 119.004)
+scale = Vector2(4, 2.667)
+texture = SubResource("CompressedTexture2D_qw63y")
+
+[node name="Cloud3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(949, 39.004)
+scale = Vector2(4, 2.667)
+texture = SubResource("CompressedTexture2D_qw63y")
+
+[node name="Cloud4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(1211, 123.004)
+scale = Vector2(4, 2.667)
+texture = SubResource("CompressedTexture2D_qw63y")
+
+[node name="Reflect" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2(830, 521.333)
+scale = Vector2(2, 3.77777)
+texture = ExtResource("10_py67r")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Cloud" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(883, 197)
+scale = Vector2(6, 4)
+texture = SubResource("CompressedTexture2D_5m71f")
+
+[node name="Cloud2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(367, 245)
+scale = Vector2(6, 4)
+texture = SubResource("CompressedTexture2D_5m71f")
+
+[node name="Cloud3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1013, 311)
+scale = Vector2(6, 4)
+texture = SubResource("CompressedTexture2D_5m71f")
+
+[node name="Reflect" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(168, 522)
+scale = Vector2(2, 2)
+texture = ExtResource("10_py67r")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Cloud" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(204, 71)
+scale = Vector2(4, 4.324)
+texture = SubResource("CompressedTexture2D_2busq")
+
+[node name="Cloud2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(725, 303)
+scale = Vector2(4, 4.324)
+texture = SubResource("CompressedTexture2D_2busq")
+
+[node name="DieArea" type="Node2D" parent="."]
+
+[node name="Death" parent="DieArea" instance=ExtResource("11_w3hnl")]
+position = Vector2(566, 664)
+
+[node name="DamageObject" type="Node2D" parent="."]
+
+[node name="Cannon" parent="DamageObject" instance=ExtResource("12_e7jb4")]
+position = Vector2(622, 467)
+
+[node name="Cannon2" parent="DamageObject" instance=ExtResource("12_e7jb4")]
+position = Vector2(655, 435)
+
+[node name="Cannon3" parent="DamageObject" instance=ExtResource("12_e7jb4")]
+position = Vector2(589, 500)
+
+[node name="Spikes" parent="DamageObject" instance=ExtResource("13_lro4s")]
+position = Vector2(272, 176)
+
+[node name="Spikes2" parent="DamageObject" instance=ExtResource("13_lro4s")]
+position = Vector2(370, 496)
